@@ -1,0 +1,416 @@
+<ThingDefs><List>
+
+
+<ThingDef Type="Item" Name="RockBase" Parent="MaterialBase">
+	
+	
+	
+	<TexPath>Item/BrownRock</TexPath>
+	<Desc>Desc.</Desc>
+	<MaxStack>500</MaxStack>
+	<Beauty>2</Beauty>
+	<MaxHitPoints>600</MaxHitPoints>
+	<Rate>1</Rate>
+	<ElementKind>Tu</ElementKind>
+	
+	<Flammability>
+		<Flammability>0.1</Flammability>
+		<FlameSpawnThingDef></FlameSpawnThingDef>
+		<FlameSpawnChance>0</FlameSpawnChance>
+		<BurningPoint>900</BurningPoint>
+	</Flammability>
+	
+	<Item Lable="Rock">
+		<FabaoSuffix>石,印,碑,珏,圭,阙,镇</FabaoSuffix>
+		<PhysicalLables>
+			<li>Heavy1</li>
+			<li>Hard1</li>
+			<li>Rough2</li>
+		</PhysicalLables>
+		 
+		<BeMaterial>
+			<CostMultiplier>1</CostMultiplier>
+			
+			<RateWhenBeMain>2</RateWhenBeMain>
+			<WorkSpeedCoefficientWhenBeMain>1</WorkSpeedCoefficientWhenBeMain>
+			
+			<SharpDamageMultiplier>1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1</BluntDamageMultiplier>
+			<LingDamageMultiplier>1</LingDamageMultiplier>
+			<AttackSpeedWhenBeMain>0.2</AttackSpeedWhenBeMain>
+			
+			<SharpDefenceMultiplier>1</SharpDefenceMultiplier>
+			<BluntDefenceMultiplier>1</BluntDefenceMultiplier>
+			<LingDefenceMultiplier>1</LingDefenceMultiplier>
+			<ColdInsulationMultiplier>1</ColdInsulationMultiplier>
+			<HeatInsulationMultiplier>1</HeatInsulationMultiplier>
+			
+			<MaxHitPointsPerNum>10</MaxHitPointsPerNum>
+			<LingNumberRate>0.3</LingNumberRate>
+			
+			<BurningPointWhenBeMain>900</BurningPointWhenBeMain>
+			<FlammabilityWhenBeMain>0.1</FlammabilityWhenBeMain>
+			<BeautyWhenBeMain>-3</BeautyWhenBeMain>
+			<ElementPowerWhenBeMain>1</ElementPowerWhenBeMain>
+			
+			<WorktoMakeRate>1.2</WorktoMakeRate>
+			<WorktoBuildRate>1.5</WorktoBuildRate>
+		</BeMaterial>
+		
+		<!--<Rot>
+			<RotSpeed>0.00005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+	</Item>
+	<Ling>
+		<AddionLing>0</AddionLing>
+		<AddionRadius>1</AddionRadius>
+		<AddionFailing>0</AddionFailing>
+		<AddionFailRadius>0</AddionFailRadius>
+		
+		<Attenuation>0.03</Attenuation>
+		<Absorption>0.2</Absorption>
+		<Accommodate>4</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Tu</Kind>
+		<Value>1</Value>         
+		<Radius>1</Radius>
+		<Failing>1</Failing>
+		<FailRadius>1</FailRadius>
+	</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_JinLingJingYC" Parent="RockBase">
+	<TexPath>Spr\object\JinLingJingYC.png</TexPath>
+	<ThingName>金灵晶</ThingName>	
+	<Desc>灵晶与天地灵根通过“和而为一”特殊法门炼制而成，行属金，“成独秀”的成熟作之一。</Desc>
+	<Rate>10</Rate>
+	<Beauty>12</Beauty>
+	<ElementKind>Jin</ElementKind>
+	<Item Lable="LingStone">
+		<PhysicalLables>
+			<li>Heavy1</li>
+			<li>Hard2</li>
+			<li>GreatThing_Ling</li>
+		</PhysicalLables>
+		<BeMaterial>
+				<NamePrefix>金灵晶</NamePrefix>
+				<CostMultiplier>1</CostMultiplier>
+				
+				<RateWhenBeMain>9</RateWhenBeMain>
+				<WorkSpeedCoefficientWhenBeMain>5</WorkSpeedCoefficientWhenBeMain>
+				<AttackSpeedWhenBeMain>3</AttackSpeedWhenBeMain>
+				<BurningPointWhenBeMain>1500</BurningPointWhenBeMain>
+			    <FlammabilityWhenBeMain>0</FlammabilityWhenBeMain>
+				<LingNumberRate>0.9</LingNumberRate>
+				<BeautyWhenBeMain>12</BeautyWhenBeMain>
+				<ElementPowerWhenBeMain>12</ElementPowerWhenBeMain>
+				<WorktoMakeRate>1</WorktoMakeRate>
+			    <WorktoBuildRate>1</WorktoBuildRate>
+		</BeMaterial>
+		<Elixir>
+			<Ling>550000</Ling>
+			<Modifier>Dan_LingCrystal</Modifier>
+		</Elixir>
+		<BeMade>
+				<WorkToMake>20</WorkToMake>
+				<CostItems>
+				    <Item name = "Item_LingCrystal" count = "1"/>
+					<Item name = "Item_JinEssence" count = "1"/>
+				</CostItems>
+		</BeMade> 
+	</Item>
+	<Ling>
+		<AddionLing>130</AddionLing>
+		<AddionRadius>3</AddionRadius>
+		<AddionFailing>0.9</AddionFailing>
+		<AddionFailRadius>1</AddionFailRadius>
+		
+		<Attenuation>0.1</Attenuation>
+		<Absorption>0.8</Absorption>
+		<Accommodate>1500</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Jin</Kind>
+		<Value>12</Value>         
+		<Radius>5</Radius>
+		<Failing>0.9</Failing>
+		<FailRadius>1</FailRadius>
+	</Element>
+	<Light>
+		<Value>30</Value>
+		<Failing>0.6</Failing>
+		<FailRadius>1</FailRadius>
+		<Radius>3</Radius>
+		<Color>FFFF0088</Color>
+	</Light>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_MuLingJingYC" Parent="RockBase">
+	<TexPath>Spr\object\MuLingJingYC.png</TexPath>
+	<ThingName>木灵晶</ThingName>	
+	<Desc>灵晶与天地灵根通过“和而为一”特殊法门炼制而成，行属木，“成独秀”的成熟作之一。</Desc>
+	<Rate>10</Rate>
+	<Beauty>120</Beauty>
+	<ElementKind>Mu</ElementKind>
+	<Item Lable="LingStone">
+		<PhysicalLables>
+			<li>Heavy1</li>
+			<li>Hard2</li>
+			<li>GreatThing_Ling</li>
+		</PhysicalLables>
+		<BeMaterial>
+				<NamePrefix>木灵晶</NamePrefix>
+				<CostMultiplier>1</CostMultiplier>
+				
+				<RateWhenBeMain>9</RateWhenBeMain>
+				<WorkSpeedCoefficientWhenBeMain>5</WorkSpeedCoefficientWhenBeMain>
+				<AttackSpeedWhenBeMain>3</AttackSpeedWhenBeMain>
+				<BurningPointWhenBeMain>1500</BurningPointWhenBeMain>
+			    <FlammabilityWhenBeMain>0</FlammabilityWhenBeMain>
+				<LingNumberRate>0.9</LingNumberRate>
+				<BeautyWhenBeMain>12</BeautyWhenBeMain>
+				<ElementPowerWhenBeMain>12</ElementPowerWhenBeMain>
+				<WorktoMakeRate>1</WorktoMakeRate>
+			    <WorktoBuildRate>1</WorktoBuildRate>
+		</BeMaterial>
+		<Elixir>
+			<Ling>550000</Ling>
+			<Modifier>Dan_LingCrystal</Modifier>
+		</Elixir>
+		<BeMade>
+				<WorkToMake>20</WorkToMake>
+				<CostItems>
+					<Item name = "Item_LingCrystal" count = "1"/>
+					<Item name = "Item_MuEssence" count = "1"/>
+				</CostItems>
+		</BeMade> 
+	</Item>
+	<Ling>
+		<AddionLing>130</AddionLing>
+		<AddionRadius>3</AddionRadius>
+		<AddionFailing>0.9</AddionFailing>
+		<AddionFailRadius>1</AddionFailRadius>
+		
+		<Attenuation>0.1</Attenuation>
+		<Absorption>0.8</Absorption>
+		<Accommodate>1500</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Mu</Kind>
+		<Value>12</Value>         
+		<Radius>5</Radius>
+		<Failing>0.9</Failing>
+		<FailRadius>1</FailRadius>
+	</Element>
+	<Light>
+		<Value>30</Value>
+		<Failing>0.6</Failing>
+		<FailRadius>1</FailRadius>
+		<Radius>3</Radius>
+		<Color>00FF00FF</Color>
+	</Light>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_ShuiLingJingYC" Parent="RockBase">
+	<TexPath>Spr\object\ShuiLingJingYC.png</TexPath>
+	<ThingName>水灵晶</ThingName>	
+	<Desc>灵晶与天地灵根通过“和而为一”特殊法门炼制而成，行属水，“成独秀”的成熟作之一。</Desc>
+	<Rate>10</Rate>
+	<Beauty>120</Beauty>
+	<ElementKind>Shui</ElementKind>
+	<Item Lable="LingStone">
+		<PhysicalLables>
+			<li>Heavy1</li>
+			<li>Hard2</li>
+			<li>GreatThing_Ling</li>
+		</PhysicalLables>
+		<BeMaterial>
+				<NamePrefix>水灵晶</NamePrefix>
+				<CostMultiplier>1</CostMultiplier>
+				
+				<RateWhenBeMain>9</RateWhenBeMain>
+				<WorkSpeedCoefficientWhenBeMain>5</WorkSpeedCoefficientWhenBeMain>
+				<AttackSpeedWhenBeMain>3</AttackSpeedWhenBeMain>
+				<BurningPointWhenBeMain>1500</BurningPointWhenBeMain>
+			    <FlammabilityWhenBeMain>0</FlammabilityWhenBeMain>
+				<LingNumberRate>0.9</LingNumberRate>
+				<BeautyWhenBeMain>12</BeautyWhenBeMain>
+				<ElementPowerWhenBeMain>12</ElementPowerWhenBeMain>
+				<WorktoMakeRate>1</WorktoMakeRate>
+			    <WorktoBuildRate>1</WorktoBuildRate>
+		</BeMaterial>
+		<Elixir>
+			<Ling>550000</Ling>
+			<Modifier>Dan_LingCrystal</Modifier>
+		</Elixir>
+		<BeMade>
+				<WorkToMake>20</WorkToMake>
+				<CostItems>
+					<Item name = "Item_LingCrystal" count = "1"/>
+					<Item name = "Item_ShuiEssence" count = "1"/>
+				</CostItems>
+		</BeMade> 
+	</Item>
+	<Ling>
+		<AddionLing>130</AddionLing>
+		<AddionRadius>3</AddionRadius>
+		<AddionFailing>0.9</AddionFailing>
+		<AddionFailRadius>1</AddionFailRadius>
+		
+		<Attenuation>0.1</Attenuation>
+		<Absorption>0.8</Absorption>
+		<Accommodate>1500</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Shui</Kind>
+		<Value>12</Value>         
+		<Radius>5</Radius>
+		<Failing>0.9</Failing>
+		<FailRadius>1</FailRadius>
+	</Element>
+	<Light>
+		<Value>30</Value>
+		<Failing>0.6</Failing>
+		<FailRadius>1</FailRadius>
+		<Radius>3</Radius>
+		<Color>87CEFF88</Color>
+	</Light>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_HuoLingJingYC" Parent="RockBase">
+	<TexPath>Spr\object\HuoLingJingYC.png</TexPath>
+	<ThingName>火灵晶</ThingName>	
+	<Desc>灵晶与天地灵根通过“和而为一”特殊法门炼制而成，行属火，“成独秀”的成熟作之一。</Desc>
+	<Rate>10</Rate>
+	<Beauty>12</Beauty>
+	<ElementKind>Huo</ElementKind>
+	<Item Lable="LingStone">
+		<PhysicalLables>
+			<li>Heavy1</li>
+			<li>Hard2</li>
+			<li>GreatThing_Ling</li>
+		</PhysicalLables>
+		<BeMaterial>
+				<NamePrefix>火灵晶</NamePrefix>
+				<CostMultiplier>1</CostMultiplier>
+				
+				<RateWhenBeMain>9</RateWhenBeMain>
+				<WorkSpeedCoefficientWhenBeMain>5</WorkSpeedCoefficientWhenBeMain>
+				<AttackSpeedWhenBeMain>3</AttackSpeedWhenBeMain>
+				<BurningPointWhenBeMain>1500</BurningPointWhenBeMain>
+			    <FlammabilityWhenBeMain>0</FlammabilityWhenBeMain>
+				<LingNumberRate>0.9</LingNumberRate>
+				<BeautyWhenBeMain>12</BeautyWhenBeMain>
+				<ElementPowerWhenBeMain>12</ElementPowerWhenBeMain>
+				<WorktoMakeRate>1</WorktoMakeRate>
+			    <WorktoBuildRate>1</WorktoBuildRate>
+		</BeMaterial>
+		<Elixir>
+			<Ling>550000</Ling>
+			<Modifier>Dan_LingCrystal</Modifier>
+		</Elixir>
+		<BeMade>
+				<WorkToMake>20</WorkToMake>
+				<CostItems>
+					<Item name = "Item_LingCrystal" count = "1"/>
+					<Item name = "Item_HuoEssence" count = "1"/>
+				</CostItems>
+		</BeMade> 
+	</Item>
+	<Ling>
+		<AddionLing>130</AddionLing>
+		<AddionRadius>3</AddionRadius>
+		<AddionFailing>0.9</AddionFailing>
+		<AddionFailRadius>1</AddionFailRadius>
+		
+		<Attenuation>0.1</Attenuation>
+		<Absorption>0.8</Absorption>
+		<Accommodate>1500</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Huo</Kind>
+		<Value>12</Value>         
+		<Radius>5</Radius>
+		<Failing>0.9</Failing>
+		<FailRadius>1</FailRadius>
+	</Element>
+	<Light>
+		<Value>30</Value>
+		<Failing>0.6</Failing>
+		<FailRadius>1</FailRadius>
+		<Radius>3</Radius>
+		<Color>FF000088</Color>
+	</Light>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_TuLingJingYC" Parent="RockBase">
+	<TexPath>Spr\object\TuLingJingYC.png</TexPath>
+	<ThingName>土灵晶</ThingName>	
+	<Desc>灵晶与天地灵根通过“和而为一”特殊法门炼制而成，行属土，“成独秀”的成熟作之一。</Desc>
+	<Rate>10</Rate>
+	<Beauty>120</Beauty>
+	<ElementKind>Tu</ElementKind>
+	<Item Lable="LingStone">
+		<PhysicalLables>
+			<li>Heavy1</li>
+			<li>Hard2</li>
+			<li>GreatThing_Ling</li>
+		</PhysicalLables>
+		<BeMaterial>
+				<NamePrefix>土灵晶</NamePrefix>
+				<CostMultiplier>1</CostMultiplier>
+				
+				<RateWhenBeMain>9</RateWhenBeMain>
+				<WorkSpeedCoefficientWhenBeMain>5</WorkSpeedCoefficientWhenBeMain>
+				<AttackSpeedWhenBeMain>3</AttackSpeedWhenBeMain>
+				<BurningPointWhenBeMain>1500</BurningPointWhenBeMain>
+			    <FlammabilityWhenBeMain>0</FlammabilityWhenBeMain>
+				<LingNumberRate>0.9</LingNumberRate>
+				<BeautyWhenBeMain>12</BeautyWhenBeMain>
+				<ElementPowerWhenBeMain>12</ElementPowerWhenBeMain>
+				<WorktoMakeRate>1</WorktoMakeRate>
+			    <WorktoBuildRate>1</WorktoBuildRate>
+		</BeMaterial>
+		<Elixir>
+			<Ling>550000</Ling>
+			<Modifier>Dan_LingCrystal</Modifier>
+		</Elixir>
+		<BeMade>
+				<WorkToMake>20</WorkToMake>
+				<CostItems>
+					<Item name = "Item_LingCrystal" count = "1"/>
+					<Item name = "Item_TuEssence" count = "1"/>
+				</CostItems>
+		</BeMade> 
+	</Item>
+	<Ling>
+		<AddionLing>130</AddionLing>
+		<AddionRadius>3</AddionRadius>
+		<AddionFailing>0.9</AddionFailing>
+		<AddionFailRadius>1</AddionFailRadius>
+		
+		<Attenuation>0.1</Attenuation>
+		<Absorption>0.8</Absorption>
+		<Accommodate>1500</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Tu</Kind>
+		<Value>12</Value>         
+		<Radius>5</Radius>
+		<Failing>0.9</Failing>
+		<FailRadius>1</FailRadius>
+	</Element>
+	<Light>
+		<Value>30</Value>
+		<Failing>0.6</Failing>
+		<FailRadius>1</FailRadius>
+		<Radius>3</Radius>
+		<Color>8B4513FF</Color>
+	</Light>
+	</ThingDef>
+	
+</List></ThingDefs>

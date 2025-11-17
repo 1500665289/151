@@ -1,0 +1,131 @@
+<ThingDefs><List>
+
+
+<ThingDef Type="Item" Name="ShengWoodYCBase" Parent="MaterialBase">
+	
+	
+	
+	<TexPath></TexPath>
+	<Desc>Desc.</Desc>
+	<MaxStack>500</MaxStack>
+	<Beauty>5</Beauty>
+	<MaxHitPoints>300</MaxHitPoints>
+	<Rate>1</Rate>
+	<ElementKind>Mu</ElementKind>
+	
+	<Flammability>
+		<Flammability>0.8</Flammability>
+		<FlameSpawnThingDef></FlameSpawnThingDef>
+		<FlameSpawnChance>0</FlameSpawnChance>
+		<BurningPoint>140</BurningPoint>
+	</Flammability>
+	
+	<Item Lable="Wood">
+		<FabaoSuffix>木,枝,柱,桩</FabaoSuffix>
+		<BeMaterial>
+			<!--<NamePrefix>木头的</NamePrefix>-->
+			<CostMultiplier>1</CostMultiplier>
+			<BuildingTileIDWhenBeMain>-10</BuildingTileIDWhenBeMain>
+			
+			<RateWhenBeMain>1</RateWhenBeMain>
+			<WorkSpeedCoefficientWhenBeMain>0.8</WorkSpeedCoefficientWhenBeMain>
+			<AttackSpeedWhenBeMain>0</AttackSpeedWhenBeMain>
+			<ColorWhenBeMain>8A4700FF</ColorWhenBeMain>
+			<ColorWhenBeFloor>6B5234FF</ColorWhenBeFloor>
+			<ColorWhenBeRoof>9E7149FF</ColorWhenBeRoof>
+			<ColdInsulationMultiplier>1</ColdInsulationMultiplier>
+			<HeatInsulationMultiplier>1</HeatInsulationMultiplier>
+			
+			<MaxHitPointsPerNum>6</MaxHitPointsPerNum>
+			<LingNumberRate>0.3</LingNumberRate>
+			<StuffTexPath>res/mattex/mtl_wood</StuffTexPath>
+			
+			<BurningPointWhenBeMain>140</BurningPointWhenBeMain>
+			<FlammabilityWhenBeMain>0.8</FlammabilityWhenBeMain>
+			<BeautyWhenBeMain>-1</BeautyWhenBeMain>
+			<ElementPowerWhenBeMain>1</ElementPowerWhenBeMain>
+			
+			<WorktoMakeRate>1</WorktoMakeRate>
+			<WorktoBuildRate>1</WorktoBuildRate>
+		</BeMaterial>
+		
+	<!--	<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+	</Item>
+
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_PanTaoWood" Parent="ShengWoodYCBase">
+	<ThingName>蟠桃木</ThingName>
+	<TexPath>Spr\object\PanTaoMuYC.png</TexPath>
+	<Desc>仙树蟠桃之木，质地绝佳，乃仙家灵材。</Desc>
+	<Rate>10</Rate>
+	<Beauty>24</Beauty>
+	<!--	<Color>8C6F14FF</Color>	-->
+	<Flammability>
+		<Flammability>0</Flammability>
+		<BurningPoint>500</BurningPoint>
+	</Flammability>
+	<Item>
+		<NotFengshuiItem>0</NotFengshuiItem>
+		<PhysicalLables>
+			<li>Smooth2</li>
+			<li>Hard2</li>
+		</PhysicalLables>
+		<FuelMultiplier>4</FuelMultiplier>
+		<BeMaterial>
+			<NamePrefix>蟠桃木</NamePrefix>
+			<CostMultiplier>1</CostMultiplier>
+			<StuffTexPath>res/mattex/mtl_wood2</StuffTexPath>
+			
+			<RateWhenBeMain>9</RateWhenBeMain>
+			<WorkSpeedCoefficientWhenBeMain>5</WorkSpeedCoefficientWhenBeMain>
+			<AttackSpeedWhenBeMain>3</AttackSpeedWhenBeMain>
+		
+			<ColdInsulationMultiplier>1</ColdInsulationMultiplier>
+			<HeatInsulationMultiplier>1</HeatInsulationMultiplier>
+			
+			<MaxHitPointsPerNum>6</MaxHitPointsPerNum>
+			<LingNumberRate>0.9</LingNumberRate>
+			
+			<BurningPointWhenBeMain>1500</BurningPointWhenBeMain>
+			<FlammabilityWhenBeMain>0</FlammabilityWhenBeMain>
+			<BeautyWhenBeMain>24</BeautyWhenBeMain>
+			<ElementPowerWhenBeMain>12</ElementPowerWhenBeMain>
+			
+			<WorktoMakeRate>1</WorktoMakeRate>
+			<WorktoBuildRate>1</WorktoBuildRate>
+		</BeMaterial>
+	</Item>
+	<Ling>
+		<AddionLing>60</AddionLing>
+		<AddionRadius>3</AddionRadius>
+		<AddionFailing>0.8</AddionFailing>
+		<AddionFailRadius>2</AddionFailRadius>
+		
+		<Attenuation>0.06</Attenuation>
+		<Absorption>0.8</Absorption>
+		<Accommodate>300</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Mu</Kind>
+		<Value>12</Value>         
+		<Radius>3</Radius>
+		<Failing>0.8</Failing>
+		<FailRadius>2</FailRadius>
+	</Element>
+	<Light>
+		<Value>10</Value>
+		<Failing>0.8</Failing>
+		<FailRadius>1</FailRadius>
+		<Radius>1</Radius>
+		<Color>FFFFFF</Color>
+	</Light>
+	</ThingDef>
+	
+	
+</List></ThingDefs>
