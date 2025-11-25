@@ -141,6 +141,14 @@
 		<Display>0</Display>
     <LuaClassName>modifier_baiyanlang</LuaClassName>
 	</Modifier>
+  <Modifier Name="Dan_NaoBaiJin" Type="Normal">
+		<DisplayName>脑白金</DisplayName>
+		<Desc></Desc>
+		<MaxStack>2</MaxStack>
+		<Duration>-1</Duration>
+		<Display>1</Display>
+    <LuaClassName>modifier_naobaijin</LuaClassName>
+	</Modifier>
   <Modifier Name="Modifier_YinYangShuangYu" Type="Normal">
 		<DisplayName>阴阳双鱼</DisplayName>
 		<Desc></Desc>
@@ -165,15 +173,6 @@
 		<Display>0</Display>
     <LuaClassName>modifier_tiaodasheng</LuaClassName>
 	</Modifier>
-  <Modifier Name="Dan_NvWa" Type="Normal">
-		<DisplayName>女娲元神丹</DisplayName>
-		<Desc></Desc>
-		<MaxStack>1</MaxStack>
-		<Duration>1</Duration>
-		<Display>0</Display>
-    <LuaClassName>modifier_nvwa</LuaClassName>
-	</Modifier>
-  
   
   <Modifier Name="Dan_FiveBase1" Type="Normal">
 		<DisplayName>通天丸</DisplayName>

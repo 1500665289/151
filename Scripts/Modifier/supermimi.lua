@@ -24,8 +24,15 @@ function tbModifier:Enter(modifier, npc)
     info.Modifiers:Add("Boss_Qianghua")
     info.ModifierScales:Add(modifier.Scale - 1)
   end
+  if modifier.Scale > 500 then --33淬以上的BOSS则添加灵气屏障。
+    info.Modifiers:Add("Boss_Barrier")
+    info.ModifierScales:Add(1)
+  end
+  if modifier.Scale > 3500 then --44淬以上大能添加物理免疫。
+    info.Modifiers:Add("Boss_Immunity")
+    info.ModifierScales:Add(1)
+  end
   local daneng = CS.XiaWorld.SpNpcMgr.Instance:CallSpNpc(info.Name)
-  self.daneng = daneng
   if modifier.Scale > 8 then --11淬以上的大能会携带随机的神器法宝，法宝威力随幽淬次数而增加。
     local fabao = ItemRandomMachine.RandomFabao(CS.XiaWorld.g_emItemLable.FightFabao, 12, 12, 1, nil, nil, 12, true)
     local atk = fabao.Fabao:GetProperty(g_emFaBaoP.AttackPower)
@@ -35,7 +42,7 @@ function tbModifier:Enter(modifier, npc)
       fabao.Fabao.AbilityDatas:Add(special_ability)
     end
     daneng:EquipItem(fabao, CS.XiaWorld.g_emEquipType.AtkFabao) --在第一个位置携带圣器法宝。
-    fabao:AddLing(fabao.MaxLing, 0) --把法宝灵气补满。
+    fabao:AddLing(fabao.Fabao:GetProperty(g_emFaBaoP.MaxLing) * (1 + fabao.Fabao:GetNpcPropertyFinalValue(daneng, "NpcFight_FabaoMaxLingAddP")), 0) --把法宝灵气补满。
   end
 end
 
@@ -51,10 +58,7 @@ end
 
 --离开modifier
 function tbModifier:Leave(modifier, npc)
-  if self.daneng then
-    self.daneng.PropertyMgr.Practice:AddGodCount(1) --所有来的大能都是在世真仙。
-    print("add godcount! ", self.daneng.PropertyMgr.Practice.GodCount)
-  end
+	
 end
 
 --获取存档数据

@@ -31,7 +31,7 @@
   
   <ThingDef Type="Item" Name="Item_StoneBox2_1" Parent="MaterialBase">
 		<ThingName>古旧石匣（真）</ThingName>
-		<MaxStack>10</MaxStack>
+		<MaxStack>1</MaxStack>
 		<TexPath>res\Sprs\object\object_shixiazi01</TexPath>
 		<Desc>可以用制药桌制作的一方石匣，虽然看上去很新，但是里面绝对有什么好东西。</Desc>	
 		<Beauty>1</Beauty>	
@@ -44,7 +44,7 @@
       <BeMade>
 				<WorkToMake>1</WorkToMake>
 				<CostItems>
-					<Item name = "Item_Ginkgo" count = "10"/>
+					<Item name = "Item_Ginkgo" count = "1"/>
 				</CostItems>
 			</BeMade>     
 			<FabaoSuffix>匣</FabaoSuffix>			
@@ -278,6 +278,7 @@
 				<li>Light1</li>
 			</PhysicalLables>
 			<Elixir>
+				<DiscipleOnly>1</DiscipleOnly>
 				<Modifier>Dan_MiMi</Modifier>
 			</Elixir>
 			<BeMade>
@@ -746,12 +747,13 @@
 			<Kind>None</Kind>
 		</Element>
 	</ThingDef>
-  <ThingDef Type="Item" Name="Item_Dan_NvWa" Parent="DanBase">
-		<ThingName>女娲元神丹</ThingName>
-		<TexPath>res\Sprs\object\object_DAdanyao05</TexPath>
-		<Desc>女娲娘娘也同时推出了自己的元神丹，服用后在没有消耗元神的情况下可以直接增加天道中对你已消耗元神的计数，方便人类炼出更高级的法宝，真不愧是娘娘啊！</Desc>	
-		<Rate>1</Rate>
-		<Beauty>1</Beauty>
+  
+  <ThingDef Type="Item" Name="Item_Dan_NaoBaiJin" Parent="DanBase">
+		<ThingName>脑白金</ThingName>
+		<TexPath>res\Sprs\object\object_changshengquan01</TexPath>
+		<Desc>吃了以后就会变得聪明100倍的神奇现代化药品。</Desc>
+		<Rate>4</Rate>
+		<Beauty>5</Beauty>
 		<ElementKind>None</ElementKind>
 		<Item Lable="Dan">
 			<PhysicalLables>
@@ -760,20 +762,20 @@
 				<li>Light1</li>
 			</PhysicalLables>
 			<Elixir>
-        <Modifier>Dan_NvWa</Modifier>
+				<Modifier>Dan_NaoBaiJin</Modifier>
 			</Elixir>
 			<BeMade>
 				<WorkToMake>20</WorkToMake>
 				<CostItems>
-					<Item name = "Item_Ginkgo" count = "5"/>
+					<Item name = "Item_Ginkgo" count = "1"/>
 				</CostItems>
-			</BeMade> 
+			</BeMade>
 		</Item>
 		<Element>
 			<Kind>None</Kind>
+			<Value>8</Value>   
 		</Element>
 	</ThingDef>
-  
   <ThingDef Type="Item" Name="Item_Dan_Breeding" Parent="DanBase">
 		<ThingName>佛跳墙（山珍版）</ThingName>
 		<TexPath>res\Sprs\object\object_jidan01</TexPath>

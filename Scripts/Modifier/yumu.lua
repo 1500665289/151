@@ -10,7 +10,7 @@ function tbModifier:Enter(modifier, npc)
   if CS.XiaWorld.FightMapMgr.Instance.MapSchool > 0 then
     self.zhu = zhu;
     zhu:SetCamp(g_emFightCamp.Friend);
-    CS.XiaWorld.FightMapMgr.Instance:BeginSchoolAttack(zhu)
+    Map:BossFightEnd();
   end
   if modifier.Scale > 1 then
     zhu:AddModifier("Boss_Qianghua", modifier.Scale);
@@ -24,7 +24,10 @@ function tbModifier:Enter(modifier, npc)
     end
   end
   if modifier.Scale > 10 then --强化超过10倍（12淬以上），则添加额外掉落品。掉落率跟强化次数有关。
-    ZhiYaoZhuo.AddDrop(npc.Key, "Item_YinYangShuangYu", nil, 1, 12, math.max(0.001 * modifier.Scale, 1));
+    ZhiYaoZhuo.AddDrop(npc.Key, "Item_YinYangShuangYu", 1, math.max(0.001 * modifier.Scale, 1));
+  end
+  if modifier.Scale > 500 then
+    zhu:AddModifier("Boss_Barrier", modifier.Scale);
   end
 end
 
@@ -35,7 +38,6 @@ function tbModifier:Step(modifier, npc, dt)
   end
   if CS.XiaWorld.FightMapMgr.MainMap and CS.XiaWorld.FightMapMgr.Instance.MapSchool > 0 and CS.XiaWorld.FightMapMgr.MainMap.Submission then
     npc:RemoveModifier("Dan_YuMu")
-    self.zhu:DoDeath()
   end
 end
 
@@ -46,7 +48,9 @@ end
 
 --离开modifier
 function tbModifier:Leave(modifier, npc)
-
+	if CS.XiaWorld.FightMapMgr.MainMap and CS.XiaWorld.FightMapMgr.Instance.MapSchool > 0 and self.zhu then
+    self.zhu:DoDeath()
+  end
 end
 
 --获取存档数据

@@ -1,10 +1,10 @@
 ﻿<SkillTree><List>	
 
-	<Node Name="Gong8_a1" Gong="Gong_8_Jin">
+	<Node Name="Gong8_a0" Gong="Gong_8_Jin">
 		<Esoterica>Magic_Zaohua_1</Esoterica>
 		<DisplayName>造化鱼土</DisplayName>
 		<Level>Qi</Level>
-		<Index>1</Index>
+		<Index>0</Index>
 		<Line>0,0,0,0,0,0,0,0</Line>
 		<PreUnit>
 		<!--	<li></li>-->

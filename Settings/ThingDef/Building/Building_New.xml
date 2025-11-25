@@ -61,7 +61,7 @@
       <Produce>
 				<ThingDef>Item_StoneBox2_1</ThingDef>
 				<Display>古旧石匣（真）</Display>
-				<Count>10</Count>
+				<Count>1</Count>
 			</Produce>
       <Produce>
 				<ThingDef>Item_RandomGongFa</ThingDef>
@@ -174,9 +174,10 @@
 				<Display>伏羲元神丹</Display>
 				<Count>1</Count>
 			</Produce>
+      
       <Produce>
-				<ThingDef>Item_Dan_NvWa</ThingDef>
-				<Display>女娲元神丹</Display>
+				<ThingDef>Item_Dan_NaoBaiJin</ThingDef>
+				<Display>脑白金</Display>
 				<Count>1</Count>
 			</Produce>
       <Produce>
